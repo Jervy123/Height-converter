@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -16,12 +22,14 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    max-width: 500px;
     gap:20px;
 }
 
 .button {
     display: flex;
     gap:5px;
+    max-width: 400px;
 }
 
 .button button {
@@ -62,4 +70,28 @@ body {
 
 #submit:hover {
     background-color: #23e309;
+}
+
+
+/* For responsiveness*/
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+        padding: 18px;
+        margin: 25px auto;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    button {
+        width:100%;
+    }
+
+    .result-container {
+        width:70%;
+        max-width: 100%;
+    }
+
 }
